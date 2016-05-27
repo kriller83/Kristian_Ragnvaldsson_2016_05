@@ -32,6 +32,8 @@ namespace Tenta.Models
             }
             var checkWord = value.ToString().ToLower();
             return !checkWord.Contains("p-");
+            //if(!value == "p-")
+            //    throw new ValidationException("Must start with 'p-' ");
         }
 
         public override string FormatErrorMessage(string field)
