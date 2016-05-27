@@ -10,7 +10,7 @@ namespace Tenta.Models
         public double GetSpeed(string distance)
         {
             double distanceInput = double.Parse(distance);
-            double time = 50;
+            double time = 60;
             var speed = distanceInput/time;
             return speed;
         }
