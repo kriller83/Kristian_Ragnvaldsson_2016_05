@@ -23,8 +23,8 @@ namespace Tenta.Models.Tests
         public void GetSpeedPositiveNumber()
         {
             GetCurrentSpeed getCurrentSpeed = new GetCurrentSpeed();
-            var expected = getCurrentSpeed.GetSpeed("2000");
-            var actual = 33.3;
+            var expected = getCurrentSpeed.GetSpeed("6000");
+            var actual = 100;
             Assert.AreEqual(expected, actual);
         }
 
@@ -32,16 +32,16 @@ namespace Tenta.Models.Tests
         public void GetSpeedNegativeNumber()
         {
             GetCurrentSpeed getCurrentSpeed = new GetCurrentSpeed();
-            var expected = getCurrentSpeed.GetSpeed("-2000");
-            var actual = -33.3;
+            var expected = getCurrentSpeed.GetSpeed("-6000");
+            var actual = -100;
             Assert.AreEqual(expected, actual);
         }
         [Test]
-        public void GetSpeedString()
+        public void GetSpeedNoInput()
         {
             GetCurrentSpeed getCurrentSpeed = new GetCurrentSpeed();
-            var expected = getCurrentSpeed.GetSpeed("2000b");
-            var actual = -33.3;
+            var expected = getCurrentSpeed.GetSpeed("0");
+            var actual = 0;
             Assert.AreEqual(expected, actual);
         }
     }
